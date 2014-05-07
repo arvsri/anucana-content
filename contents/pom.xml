@@ -1,0 +1,49 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.anucana</groupId>
+  <artifactId>anucana-contents</artifactId>
+  <packaging>war</packaging>
+  <version>1.0-SNAPSHOT</version>
+  
+  <name>Anucana Contents</name>
+  <url>http://www.anucana.com</url>
+  
+  <inceptionYear>2013</inceptionYear>
+  <organization>
+	<name>anucana</name>
+	<url>http://www.anucana.com</url>
+  </organization>
+
+  <build>
+  	<finalName>contents</finalName>
+	<plugins>
+		<plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-war-plugin</artifactId>
+			<version>2.4</version>
+			<configuration>
+				<webResources>
+					<resource>
+						<directory>web-content</directory>
+					</resource>
+				</webResources>
+				<webXml>web.xml</webXml>
+			</configuration>
+ 	    </plugin>
+		<plugin>
+			<groupId>org.mortbay.jetty</groupId>
+			<artifactId>maven-jetty-plugin</artifactId>
+				<configuration>
+					<webApp>${basedir}/target/contents.war</webApp>
+					<contextPath>/contents</contextPath>
+ 				    <connectors>
+						<connector implementation="org.mortbay.jetty.nio.SelectChannelConnector">
+						  <port>8081</port>
+						</connector>
+					</connectors>					
+				</configuration>
+			</plugin>	
+		</plugins>
+  </build>
+</project>
