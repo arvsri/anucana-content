@@ -137,6 +137,10 @@ src: url(../css/fonts/WebSymbols/WebSymbols-Regular.otf) format("opentype");
   color : #008fcc; font-weight : bold;font-size:14px;
 }
 
+.blueHeader16{
+  color : #008fcc; font-weight : bold;font-size:16px;
+}
+
 #membersBriefBox{
   padding:5px;margin-top:20px;margin-bottom: 20px;
 }
@@ -384,6 +388,8 @@ ul
 a, a:link, a:visited { color: #009ddb; text-decoration: none; }
 
 a:hover { color:#009ddb; text-decoration: underline; }
+.connect:hover{ 
+    color: #009DDB;}
 
 p { margin: 0; padding: 0; }
 img { border: none; }
@@ -480,7 +486,8 @@ em { color: #CCC; }
 #events_link:hover {background: url(../images/icons/events_icon02.png) no-repeat;}
 #events_link.active {background: url(../images/icons/events_icon02.png) no-repeat;}
 
-#featured_project_box, #dashboardSlideshow { width: 580px; height: 390px; padding: 0px 0px 25px; margin-bottom: 30px;  float: left;}
+#featured_project_box, #dashboardSlideshow, #contactUsForm { width: 580px; height: 390px; padding: 0px 0px 25px; margin-bottom: 30px;  float: left;}
+#contactUsForm {margin-left: 100px;}
 #dashboardSlideshow{width: 620px; height: auto;}
 #dashboardSlideshow > #slider {margin-bottom: 5px;}
 #loginBlock {width : 380px; float : right;margin-top: 12px;}
@@ -490,6 +497,7 @@ em { color: #CCC; }
 #clear {clear:both;}
 
 #anucana_registration {float:right; width:360px;}
+#contactUsInfo {float:right; width:300px; padding-left: 100px;}
 #anucana_forgotPwd, #anucana_searchCommunity{margin-left:308px;}
 #anucana_registration h2 {margin-bottom:15px;}
 .description {font-size: 14px; font-weight: bold; line-height: 20px; margin-bottom:20px;}
@@ -497,7 +505,7 @@ em { color: #CCC; }
 
 #firstname {width:148px;}
 #lastname {width:188px;}
-#reg_email, #reg_pass{margin-top:25px; width:358px;}
+#reg_email, #reg_pass, #reg_pass_verify {margin-top:25px; width:358px;}
 #signup_submit {margin-top:25px; width:366px; background-color:#009ddb; color:white; font-weight:bold; border-color:#009ddb;}
 #reg_policy {margin-top: 10px;}
 
@@ -506,6 +514,7 @@ em { color: #CCC; }
 #featured_project .fp_img img { width: 380px; height: 180px }
 #featured_project .fp_img span { width: 400px; height: 200px; position: absolute; top: 0; left: 0; background: url(../images/anucana_featured_work.png) }
 
+#contactUsForm {}
 
 #fp_content { float: right; width: 380px; font-size: 18px; line-height: 22px }
 #fp_content p { margin-bottom: 20px; color: #333 }
@@ -548,7 +557,8 @@ em { color: #CCC; }
 #news_box h6:hover { color: #9CF; text-decoration: underline }
 
 /* forgot password */
-#forgotpwd_email, #searchCommunity_keyword {width: 358px;}
+#forgotpwd_email, #searchCommunity_keyword{width: 358px;}
+#newPassword, #newPasswordConfirm {width: 250px;}
 #forgotpwd_cont, #searchCommunity_search {margin-top:10px; padding: 4px 16px;}
 /* end of forgot password */
 
@@ -641,6 +651,9 @@ body { font-family: sans-serif; }
 .col4 { width: 100%; height: auto;}
 .col5 { width: 210px; height:80px;}
 .col6 { width: 180px; height: auto;}
+.col7 { width: 280px; height:auto;}
+.col8 { width: 450px; height:auto;}
+.col9 { width: 500px; height:auto;}
 
 .profilePicImage {width: 100%;height: 100%;}
 #profilePicBlock {width: 200px; height: 200px;position: relative;}
@@ -652,6 +665,16 @@ body { font-family: sans-serif; }
 #accordion>div>h3 {
   text-align:right;
 }
+
+#checkoutAccordion>div {
+  margin-top:5px;
+}
+
+#checkoutAccordion>div>h3 {
+  text-align:left;
+}
+
+
 
 #contactInfoAccordian>h3>span:nth-child(2){
   float:left;width:100px;
@@ -673,16 +696,20 @@ body { font-family: sans-serif; }
   margin: 5px 0px 5px;
 }
 
-#accordion .ui-accordion-header  a {  
+#accordion .ui-accordion-header  a, #checkoutAccordion .ui-accordion-header  a {  
   color: #008fcc;
     /*background-color: #ccc;  */
 
 }
 
-#accordion .ui-state-active  a, #accordion .ui-state-hover  a {  
+#accordion .ui-state-active  a, #accordion .ui-state-hover  a, #checkoutAccordion .ui-state-active  a, #checkoutAccordion .ui-state-hover  a  {  
     color: #00689c;
   /*color: #0074AD;*/
     /*background-color: #ccc; */ 
+}
+
+#coEmail, #coPass, #coFirstName, #coLastName, #coReEnterPass{
+  height: 30px;
 }
 
 
@@ -695,9 +722,9 @@ body { font-family: sans-serif; }
   line-height: 1.4em;
   float: left;
   overflow: hidden;
-  -webkit-border-radius: 5px;
-     -moz-border-radius: 5px;
-          border-radius: 5px;
+  -webkit-border-radius: 6px;
+     -moz-border-radius: 6px;
+          border-radius: 6px;
 }
 
 .verticalMargin20{
@@ -790,8 +817,8 @@ font-size: 15px;
 }
 
 .smallButton{
-  padding: 0.4em 0.5em;
-  font-size: 15px;
+  padding: 0.4em 0.5em !important;
+  font-size: 15px !important;
 }
 
 .verySmallButton{
@@ -860,4 +887,12 @@ cursor: pointer;
 border-radius: 7px;
 font-size: 15px;
 font-weight: bold;
+}
+
+#ticketSummaryTable tr td{
+  padding: 4px;
+}
+
+#bookingSummaryRightBlock table tr td{
+  padding:10px;
 }
