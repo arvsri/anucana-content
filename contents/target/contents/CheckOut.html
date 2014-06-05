@@ -1,0 +1,856 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Anucana</title>
+
+<link href="css/jquery-ui.css" rel="stylesheet" type="text/css" />
+<link href="css/anucana_style.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="css/jcrop/jquery.Jcrop.css" type="text/css" />
+<link rel="stylesheet" href="css/colorbox.css" />
+
+<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
+<link rel="shortcut icon" href="images/icons/favicon.ico">
+</head>
+<body class="fontBlack">
+
+<div id="anucana_outer_wrapper">
+
+    <!-- This div holds Block 1 & Block 2 -->
+    <div id="headerContent_Member"></div>
+  
+    <!-- This div holds Block 3 -->
+    <div id="sideButtons_Member"></div> 
+
+    <!--Block 4 - This block holds Search Community form and search results -->
+	<div id="anucana_wrapper" class="wrapper_1020">
+        
+        <div id="anucana_main">
+            <div id="grey_wrapper" class="greyLinen_background">
+
+                <div style="margin-top:10px;">
+
+
+                  <div id="checkoutAccordion">
+                      <div id="signUpAcc">
+                          <h3 class="blueHeader14"><a href="#" id="signInLink">1. Sign In</a></h3>
+                          <div id="contactInfoAccordian">
+                            
+                              <!-- start of login block -->
+                              <div id="checkoutLoginBlock">
+                                  <table cellspacing="0" style="margin: 0 auto;">
+                                      <tbody>
+                                         <tr id="coFirstNameRow" style="display:inline-block">
+                                            <td style="padding:5px 0px 5px 0px;">
+                                                <input type="text" tabindex="1" class="mediumLengthBox" value="" id="coFirstName" name="firstName" placeholder="First Name">
+                                            </td>
+                                          </tr>
+                            
+                                          <tr id="coLastNameRow">
+                                            <td style="padding:5px 0px 5px 0px;">
+                                                <input type="text" tabindex="1" class="mediumLengthBox" value="" id="coLastName" name="lastName" placeholder="Last Name">
+                                            </td>
+                                          </tr>
+
+                                          <tr style="display:inline-block">
+                                            <td style="padding:5px 0px 5px 0px;">
+                                                <input type="text" tabindex="1" class="mediumLengthBox" value="" id="coEmail" name="email" placeholder="Email or Phone">
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td style="padding:5px 5px 5px 0px;">
+                                                <input type="password" tabindex="2" class="mediumLengthBox" id="coPass" name="pass" placeholder="Password">
+                                            </td>
+                                            <td style="padding:5px 0px 5px 0px;">
+                                                <div id="coForgotPasswordDiv"><a href="ForgotPassword.html">Forgot?</a></div>
+                                            </td>
+                                          </tr>
+                                          <tr id="coReEnterPassRow" style="display:inline-block">
+                                            <td style="padding:5px 5px 5px 0px;">
+                                                <input type="password" tabindex="2" class="mediumLengthBox" id="coReEnterPass" name="pass" placeholder="Re-Enter Password">
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td style="padding:5px 5px 5px 0px;">
+                                              <label for="coEnableSignUp">
+                                                <input type="checkbox" id="coEnableSignUp" tabindex="2" name="pass" placeholder="Password">I do not have anucana account
+                                              </label>
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td style="padding:5px 0px 5px 0px;">
+                                                <label for="coSignUpSubmit" id="loginbutton"><input type="button" id="coSignUpSubmit" class="blueButton smallButton" tabindex="4" value="Sign In"></label>
+                                            </td>
+                                          </tr>
+                                      </tbody>
+                                      
+                                  </table>
+                                  <div id="clear"></div>
+                              </div> <!-- end of login block -->
+                          
+                  
+                          </div>
+
+                          <h3 class="blueHeader14"><a href="#">2. Booking Summary</a></h3>
+                          <div>
+                            <div style="text-align:left; width:50%; float:left;padding-left:20px;">
+                                <table id="ticketSummaryTable">
+                                  <tr>
+                                    <th>Event</th>
+                                    <td>:</td>
+                                    <td>Relics of PHP</td>
+                                  </tr>
+                                  <tr>
+                                    <th>Venue</th>
+                                    <td>:</td>
+                                    <td>Anucana Bhavan, 7 Race Course Road</td>
+                                  </tr>
+                                  <tr>
+                                    <th>Location</th>
+                                    <td>:</td>
+                                    <td>NCR, Delhi</td>
+                                  </tr>
+                                  <tr>
+                                    <th>Date</th>
+                                    <td>:</td>
+                                    <td>07-May-2014</td>
+                                  </tr>
+                                  <tr>
+                                    <th>Time</th>
+                                    <td>:</td>
+                                    <td>10:30am</td>
+                                  </tr>
+                                  <tr>
+                                    <th>Duration</th>
+                                    <td>:</td>
+                                    <td>180 min</td>
+                                  </tr>
+                                  <tr>
+                                    <th>Seat Info</th>
+                                    <td>:</td>
+                                    <td>B-023, B-024</td>
+                                  </tr>
+                                  <tr>
+                                    <th>Quantity</th>
+                                    <td>:</td>
+                                    <td>2</td>
+                                  </tr>
+                                  <tr>
+                                    <th>Total</th>
+                                    <td>:</td>
+                                    <td id="payAmount">Rs. 1000.00</td>
+                                  </tr>
+                                  <tr id="discountRow" style="display:none;">
+                                    <th></th>
+                                    <td></td>
+                                    <td>Rs. 800.00 
+                                      <span class="roundedCorners" style="background-color:#6FBA54; color:#FFFFFF; padding:3px; margin-left:5px;">
+                                        <span class="webSymbol">&nbsp;.</span> 20% discount applied&nbsp;
+                                      </span>
+                                    </td>
+                                  </tr>
+                                </table>
+                                <input style="margin-top:10px;" id="paymentSubmit" class="blueButton bigButton" type="button" value="Proceed To Payment" tabindex="4">
+                              </div>
+                              <div style="width:45%; float:right;" id="bookingSummaryRightBlock">
+                                <table>
+                                  <tr>
+                                    <td style="padding-top:0px;"><img class="photo" src="images/featured_project.jpg"></td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <label for="couponCode">Apply Coupon :</label>
+                                      <input id="couponCode" type="text" placeholder="Enter Coupon Code"/>
+                                      <input id="applyCouponCode" type="button" class="blueButton verySmallButton" value="Apply">
+                                    </td>
+                                  </tr>
+                                  <tr ><td><div style="color:#FF614D;">This Coupon Code is Expired.</div><td></tr>
+                                </table>
+                                  
+                              </div>
+                          </div>
+
+
+                      </div>
+                
+                  </div>
+                </div>
+            </div> <!-- end of grey_wrapper -->
+
+        </div> <!-- end of anucana_main -->
+
+        <!--Block 5 - This block holds the padding space to keep the footer at bottom -->
+        <div id="emptyPad" style="height:130px" > </div>
+
+        <!-- This div holds Block 6 -->
+        <div id="footerContent"></div>
+       
+    </div> <!-- end of anucana_wrapper -->
+	</div> <!-- end of anucana_outer_wrapper -->
+
+
+
+
+
+
+
+<script type='text/javascript' src='js/logging.js'></script>
+
+  <!-- jQuery -->
+  <script src="js/jquery1.9.1.min.js"></script>
+  
+  <!-- jQuery-ui -->
+  <script src="js/jquery-ui.js"></script>
+
+  <!-- masonry pluggin-->
+  <script src="js/masonry.pkgd.js"></script>
+
+  <!-- images loaded pluggin-->
+  <script src="js/imagesloaded.pkgd.js"></script>
+
+  <!-- FlexSlider -->
+  <script defer src="js/jquery.flexslider.js"></script>
+
+  <!-- Jcrop pluggin-->
+  <script src="js/jcrop/jquery.Jcrop.min.js"></script>
+
+  <!-- lightbox pluggin -->
+  <script src="js/jquery.colorbox.js"></script>
+
+  <script type="text/javascript">
+	$(window).load(function() {
+
+
+        $(function() {
+          var availableTags = [
+          "Software",
+          "Healthcare",
+          "Automobile",
+          "Marketing",
+          "Broadcasting",
+          "Education",
+          "Electronics",
+          "Textiles",
+          "Electrical",
+          "Food & Agriculture",
+          "Garment Industry",
+          "Analytics"
+          ];
+          $( "#industryName" ).autocomplete({
+            source: availableTags,
+            focus: function () {
+                  $(".ui-autocomplete").addClass("custom-onhover");
+
+            }
+          });
+        });
+
+       
+       
+
+
+         $( ".tooltip" ).tooltip({
+            tooltipClass: "custom-tooltip-styling",
+            show: null,
+            position: {
+            my: "left middle",
+            at: "right middle"
+            },
+            open: function( event, ui ) {
+            ui.tooltip.animate({ top: ui.tooltip.position().top + 10 }, "fast" );
+            },
+            content: function() {
+              return $(this).attr('title');
+            }
+        });
+
+         function showErrorMessage(field, my1, my2, at1, at2, message, errorClass){
+              $(field).addClass(errorClass);
+              $(field).attr('title',message);
+              $(field).tooltip({
+                tooltipClass: "error-tooltip-styling",
+              show: null,
+              position: {
+              my: my1+" "+my2,
+              at: at1+" "+at2
+              },
+              content: function() {
+                return $(this).attr('title');
+              }
+            });
+            $(field).tooltip('open');
+          
+         }
+
+        
+
+        function refreshMasonry(){
+              $container.masonry({
+                itemSelector: '.masonryBox',
+                columnWidth: 50,
+                isAnimated: true,
+                gutter:26
+              });
+        }
+
+
+        /* This block applies accordion  on all child divs of checkoutAccordion independent of each other and on contactInfoAccordian */
+        $(function() {
+            var $acc = $("#checkoutAccordion > div").accordion({ header: "> h3", 
+              collapsible: true, 
+              active: false, 
+              heightStyle: "content"
+            });
+            $("#checkoutAccordion > div:first-child").accordion('option', 'active', 0);
+
+           /* $( "#myCommunitiesAcc" ).on( "accordionactivate", function( event, ui ) {
+              refreshMasonry();
+            } );*/
+        })
+
+        /*Scope of improved calls in below block.. as i did quick jugad coding here .. :) */
+        $('#coSignUpSubmit').click(function(){
+          $("#signUpAcc").accordion('option', 'active', 1).click();
+          //$("#signUpAcc").accordion('option', 'active', 1);
+          //$("#bookingSummaryAcc").accordion('option', 'active', 0);
+          
+          //$("#contactInfoAccordian").accordion({active: false}).click();
+        });
+
+        $('#coFirstNameRow').hide();
+        $('#coLastNameRow').hide();
+        $('#coReEnterPassRow').hide();
+        $('#coEnableSignUp').click(function(){
+          //Below dummy json object will be replaced by the dynamically fetched json.
+            var checked = $('#coEnableSignUp:checkbox:checked').length > 0;
+            if(checked){
+              $("#coFirstNameRow").slideDown();
+              $("#coLastNameRow").slideDown();
+              $("#coReEnterPassRow").slideDown();
+            }
+            else{
+              $("#coFirstNameRow").slideUp();
+              $("#coLastNameRow").slideUp();
+              $("#coReEnterPassRow").slideUp();
+            }
+   // return false;
+           /* $('#coReEnterPassRow').slideToggle('medium', function() {
+                if (checked){
+                  
+                    $('#coReEnterPassRow').css('display','inline-block');
+                  /*
+                  $('#coFirstNameRow').slideToggle('medium', function() {
+                    $('#coFirstNameRow').css('display','inline-block');
+                  });
+                  $('#coLastNameRow').slideToggle('medium', function() {
+                    $('#coLastNameRow').css('display','inline-block');
+                  });*/   
+                //}
+            //});
+            
+/*
+            if(checked){
+              $('#coReEnterPass').css('display','block');
+            }
+            else{
+              $('#coReEnterPass').css('display','none');
+            }*/
+        });
+
+        $('#applyCouponCode').click(function(){
+          //Make an ajax call here to apply coupon code, and in case success is returned, display the discounted price else show error.
+          $("#payAmount").css("text-decoration","line-through");
+          $("#discountRow").show();
+          //$(".joinTextStyle", this).removeClass("joinTextStyle").addClass("icon").text(".");
+        });
+
+        $("#signUpAcc").accordion({
+            activate: function(event, ui) {
+                alert(ui.newHeader.text());  // For instance.
+                var active = $( "#signUpAcc" ).accordion( "option", "active" );
+                alert(active);
+            }
+        });
+
+
+        $('#anucana_outer_wrapper').on("click", "#pincodeButton", function() {
+            $('#locationOptions').removeClass('hidden');
+        });
+
+
+        $('#anucana_outer_wrapper').on("click", "#locationOptions", function() {
+            var selectedLocation = $('input[type="radio"][name="locationRadio"]:checked + label').text();
+            $('#locationOptions').addClass('hidden');
+            $('#selectedLocation').removeClass('hidden');
+            $('#selectedLocation').text(selectedLocation);
+        });
+
+
+        /* Validation methods of contactInfoAccordian input fields start here.. This code can be further streamlined */
+
+        $('#anucana_outer_wrapper').on("click", "#savePhoneButton", function() {
+          // Call the static phone number validation here -----
+          var updatedValue = $('#phoneNumberInput').val();
+          if(! checkNullOrEmpty(updatedValue)){
+            showErrorMessage($('#phoneNumberInput'), "right", "middle", "left-20", "middle", "Please enter valid phone number", 'errorInputbox');
+            return false;
+          }
+          else{
+            $('#phoneNumberInput').removeAttr('title').removeClass('errorInputbox');
+          }
+          $('#phoneNumberDisplay').text(updatedValue);
+          $("#contactInfoAccordian").accordion({active: false}).click();
+        });
+
+       $('#anucana_outer_wrapper').on("click", "#savePriEmailButton", function() {
+          // Call the static email validations here -----
+          var updatedValue = $('#primaryEmailInput').val();
+          if(! checkNullOrEmpty(updatedValue)){
+            showErrorMessage($('#primaryEmailInput'), "right", "middle", "left-20", "middle", "Please enter valid email number", 'errorInputbox');
+            return false;
+          }
+          else{
+            $('#primaryEmailInput').removeAttr('title').removeClass('errorInputbox');
+          }
+          $('#priEmailDisplay').text(updatedValue);
+          $("#contactInfoAccordian").accordion({active: false}).click();
+        });
+
+        $('#anucana_outer_wrapper').on("click", "#saveContactEmailButton", function() {
+          // Call the static email validations here -----
+          var updatedValue = $('#contactEmailInput').val();
+          if(! checkNullOrEmpty(updatedValue)){
+            showErrorMessage($('#contactEmailInput'), "right", "middle", "left-20", "middle", "Please enter valid email number", 'errorInputbox');
+            return false;
+          }
+          else{
+            $('#contactEmailInput').removeAttr('title').removeClass('errorInputbox');
+          }
+          $('#contactEmailDisplay').text(updatedValue);
+          $("#contactInfoAccordian").accordion({active: false}).click();
+        });
+
+ 
+        /* Arvind : Pick the below mentioned matcher patterns from a properties file. Same properties file should be refered to embed these matcher patters in the description text while saving this event description in the DB. eg. In our properties file it should look something like -  
+          msg.trainerNameMatcher = {trainerName} 
+
+        So while fetching its value here, in case of struts it can be done as -
+          var trainerNameMatcher = <s:text name="msg.confirm"/>
+
+        Below hard coded values of matchers & dynamicDivMarkupString should be replaced with dynamic code.
+        */
+
+        // These few variables are declared global. These have usage in multiple functions here.
+        // To be replaced within trainer/event span string.
+        var trainerNameMatcher = "{trainerName}";
+        var eventNameMatcher = "{eventName}";
+
+        var boxIndexMatcher = "{boxIndex}";
+        var impIndexMatcher = "{impIndex}";
+        var imageSourceMatcher = "{imageSource}";
+        var eventDateMatcher = "{eventDate}";
+        var eventStartTimeMatcher = "{eventStartTime}";
+        var eventDurationMatcher = "{eventDuration}";
+        var eventVenueMatcher = "{eventVenue}";
+        var longDescMatcher = "{longDesc}";
+
+        // Arvind : Dummy ajax call method. Remove this method when the actual ajax call is coded.
+        function ajaxCall(){
+          var responseJSON = [
+          {"trainer":"Mark","eventName":"Relics of Python","eventDate":"26-Mar-2014", "startTime":"03:30PM","duration":"180 min", "eventVenue":"Hayat Hotel", "imgSrc":"images/featured_project.jpg", "shortDesc":"{trainerNameMarkup} is gonna blabber on {eventNameMarkup}" , "longDescription":"Its a long desc. {trainerName} is gonna blabber on {eventName}" ,  "impIndex":"6", "membershipStatus": "false"},
+          {"trainer":"Tony","eventName":"Relics of PHP","eventDate":"22-Apr-2014", "startTime":"05:30PM","duration":"180 min", "eventVenue":"Regals Residency","imgSrc":"images/featured_project.jpg", "shortDesc":"{trainerNameMarkup} is gonna rahul gandhi on {eventNameMarkup}" , "longDescription":"Its a long desc. {trainerName} is gonna rahul gandhi on {eventName}" ,  "impIndex":"6", "membershipStatus": "true"},
+          {"trainer":"Brian","eventName":"Relics of Ruby","eventDate":"25-May-2014", "startTime":"01:30PM","duration":"180 min" ,"eventVenue":"Lutyens","imgSrc":"images/featured_project.jpg", "shortDesc":"{trainerNameMarkup} is gonna dance on {eventNameMarkup}" , "longDescription":"Its a long desc. {trainerName} is gonna dance on {eventName}" ,  "impIndex":"6", "membershipStatus": "false"},
+          {"trainer":"Brian","eventName":"Relics of Ruby","eventDate":"25-May-2014", "startTime":"01:30PM","duration":"180 min" ,"eventVenue":"Lutyens","imgSrc":"images/featured_project.jpg", "shortDesc":"{trainerNameMarkup} is gonna dance on {eventNameMarkup}" , "longDescription":"Its a long desc. {trainerName} is gonna dance on {eventName}" ,  "impIndex":"6", "membershipStatus": "false"},
+          {"trainer":"Brian","eventName":"Relics of Ruby","eventDate":"25-May-2014", "startTime":"01:30PM","duration":"180 min" ,"eventVenue":"Lutyens","imgSrc":"images/featured_project.jpg", "shortDesc":"{trainerNameMarkup} is gonna dance on {eventNameMarkup}" , "longDescription":"Its a long desc. {trainerName} is gonna dance on {eventName}" ,  "impIndex":"6", "membershipStatus": "false"},
+          {"trainer":"Brian","eventName":"Relics of Ruby","eventDate":"25-May-2014", "startTime":"01:30PM","duration":"180 min" ,"eventVenue":"Lutyens","imgSrc":"images/featured_project.jpg", "shortDesc":"{trainerNameMarkup} is gonna dance on {eventNameMarkup}" , "longDescription":"Its a long desc. {trainerName} is gonna dance on {eventName}" ,  "impIndex":"6", "membershipStatus": "false"}
+          ];
+
+          return responseJSON;
+        }
+
+        // Global variable to count the number of dynamic boxes loaded on this page so far
+        var dynamicBoxesLoaded = 0;
+        var $container = $('.masonry');
+
+        //Below dummy json object will be replaced by the dynamically fetched json.
+        var responseJSONN = ajaxCall();
+      //  appendMasonryElements(responseJSONN);
+
+
+        // This method appends newly generated masonry boxes to the masonry container
+        function appendMasonryElements(responseJSON){
+          var lastLoadedCount = dynamicBoxesLoaded;
+          var boxList = $();
+          $.each(responseJSON, function(i, eventData) {
+            var boxElement = getBoxElement(i, lastLoadedCount, eventData);
+            boxList = boxList.add($(boxElement));
+            dynamicBoxesLoaded++;
+          });
+
+          $container = $container.append( boxList );
+
+          $('.masonry').imagesLoaded( function() {
+            // images have loaded
+            $container.masonry( 'appended', boxList )
+                .masonry({
+                  itemSelector: '.community_box',
+                  columnWidth: 60,
+                  isAnimated: true,
+                  gutter:20
+                });
+            });
+        }
+
+
+        function getBoxElement(index, lastLoadedCount, eventData) {
+          
+         //Fetch impIndex to decide the dimentions based on importance of this element box. 
+         var impIndex = eventData.impIndex;
+          // In case no impIndex is sent with an Event
+          if(impIndex == null || impIndex == ""){
+            impIndex = getRandomImpIndex();
+          }
+
+          //Fetch membership status to decide which style class to be imparted to 'join' circular button
+          var communityJoined = eventData.membershipStatus;
+          var joinCircleClass;
+          var joinCircleText;
+          var backgroundColor;
+          if(communityJoined == "true"){
+            joinCircleClass = "icon";
+            backgroundColor = "blueBackground";
+            joinCircleText = ".";
+          }
+          else{
+            joinCircleClass = "joinTextStyle";
+            joinCircleText = "Join";
+          }
+
+
+        /* Arvind : Pick the below mentioned matcher patterns from a properties file. Same properties file should be refered to embed these matcher patters in the description text while saving this event description in the DB. eg. In our properties file it should look something like -  
+          msg.trainerNameMatcher = {trainerName} 
+
+        So while fetching its value here, in case of struts it can be done as -
+          var trainerNameMatcher = <s:text name="msg.confirm"/>
+
+        Below hard coded values of matchers & dynamicDivMarkupString should be replaced with dynamic code.
+        */
+
+          // To be replaced in the event desc string.
+          var trainerNameMarkupMatcher = "{trainerNameMarkup}";
+          var eventNameMarkupMatcher = "{eventNameMarkup}";
+          var shortDescMatcher = "{shortDesc}";
+
+          var dynamicDivMarkupString = 
+          '<div id="dynamicBox{boxIndex}" class="community_box col{impIndex}">'+
+            '<div class="communityBoxLabel">'+
+              '<a href="CommunityPage.html">'+
+                '<img class="communityBoxPhoto" src={imageSource}>'+
+              '</a>'+
+              '<div class="border joinCircle_CSR '+ backgroundColor +'">'+
+                '<div class="circleFiller">'+
+                  '<span class="'+ joinCircleClass +'">'+ joinCircleText +'</span>'+
+                '</div>'+
+              '</div>'+
+            '</div>'+
+            '<div  style="background:white;padding:5px;">'+
+                '<p style="color:black;">{shortDesc}</p>'+
+            '</div>'+
+          '</div>';
+
+          var trainerNameMarkupString = '<span class="trainerName">{trainerName}</span>';
+          var eventNameMarkupString = '<span class="eventName">{eventName}</span>';
+
+
+          dynamicDivMarkupString = dynamicDivMarkupString.split(boxIndexMatcher).join((index+lastLoadedCount));
+          dynamicDivMarkupString = dynamicDivMarkupString.replace(impIndexMatcher, impIndex);
+          dynamicDivMarkupString = dynamicDivMarkupString.replace(imageSourceMatcher, eventData.imgSrc);
+
+          var shortDesc = eventData.shortDesc;
+          var trainerName = trainerNameMarkupString.replace(trainerNameMatcher, eventData.trainer);
+          shortDesc = shortDesc.replace(trainerNameMarkupMatcher, trainerName);
+          var eventName = eventNameMarkupString.replace(eventNameMatcher, eventData.eventName);
+          shortDesc = shortDesc.replace(eventNameMarkupMatcher, eventName);
+
+          
+          // More details may be added to event description viz. Date, Time etc on similar lines of trainerName & eventName as above.
+
+          dynamicDivMarkupString = dynamicDivMarkupString.replace(shortDescMatcher, shortDesc);
+          var dynamicDivHTML = $.parseHTML( dynamicDivMarkupString );
+
+          return dynamicDivHTML;
+        }
+
+
+        //Below dummy json object will be replaced by the dynamically fetched json.
+        //var communityMembersJSONN = ajaxCallFetchPosts();
+       // $container.empty();
+        //var boxList = $();
+        //boxList = appendCommunityBannerElement(boxList);
+        //boxList = appendCommunityHomeBoxElements(boxList);
+        //appendCommunityPostElements(communityMembersJSONN, boxList);
+
+        $(".inline").colorbox({inline:true, width:"50%", initialWidth: 100, initialHeight: 100});
+        
+
+      // Arvind : Code Snippet# D1. This function is just to include the htmls. Not needed in jsp.
+      $(function(){
+        $("#headerContent_Member").load("HeaderContentMember.html"); 
+        $("#sideButtons_Member").load("SideButtonsMember.html", function() {
+            // Code Snippet# D2. 
+              if ( $('#blog_page').length ) {
+                // exists
+              } else if ( $('#discuss_page').length ) {
+                // exists
+              } else if ( $('#events_page').length ) {
+                $('#events_link').addClass('active');
+              } else{
+                // doesn't exist
+              }
+        });
+        $("#footerContent").load("FooterContent.html"); 
+      });
+
+          /*
+          // Arvind : Unleash this piece of code when using jsps. Remove code snippet# D2, while uncommenting this code. This piece of code can be moved to a common location. eg. header.jsp if one exists.
+            if ( $('#blog_page').length ) {
+              // exists
+            } else if ( $('#discuss_page').length ) {
+              // exists
+            } else if ( $('#events_page').length ) {
+              $('#events_link').addClass('active');
+            } else{
+              // doesn't exist
+            }
+          */
+
+            function checkNullOrEmpty(fieldValue){
+                if (fieldValue == null || fieldValue.length==0){
+                  return false;
+                }
+                return true;
+            }
+
+
+
+
+            function validateProfileName(firstName, lastName){
+              //alert('firstName and lastName -'+$(firstName).text()+'**'+$(lastName).text());
+              firstNameValue = $(firstName).text();
+              lastNameValue = $(lastName).text();
+
+              var valid1 = checkNullOrEmpty(firstNameValue);
+              if (! valid1){
+                showErrorMessage(firstName,"right","bottom","left+50","top-10","Please enter First Name", 'errorSpanOnGrey');
+              }
+              else{
+                $(firstName).removeAttr('title').removeClass('errorSpanOnGrey');
+              }
+
+              var valid2 = checkNullOrEmpty(lastNameValue);
+              if (! valid2){
+                showErrorMessage(lastName,"left","bottom","right-50","top-10","Please enter Last Name", 'errorSpanOnGrey')
+              }
+              else{
+                $(lastName).removeAttr('title').removeClass('errorSpanOnGrey');;
+              }
+
+              return (valid1 && valid2);
+            }
+
+
+
+            function showHideIcons(icon1, icon2){
+              $(icon1).addClass('hidden');
+              $(icon2).removeClass('hidden');
+            }
+
+            function activateReadWriteMode(textDiv, editIcon, saveIcon){
+              $(textDiv).attr('contenteditable','true');
+              showHideIcons(editIcon, saveIcon);
+            }
+
+            function activateReadOnlyMode(textDiv, editIcon, saveIcon){
+              $(textDiv).removeAttr('contenteditable');
+              showHideIcons(saveIcon, editIcon); 
+            }
+
+            $('#anucana_outer_wrapper').on("click", "#professionalHeadline", function() {
+              activateReadWriteMode($('#professionalHeadline'), $('#editCompanyName'), $('#saveCompanyName'));
+            });
+
+            $('#anucana_outer_wrapper').on("click", "#editCompanyName", function() {
+              activateReadWriteMode($('#professionalHeadline'), $('#editCompanyName'), $('#saveCompanyName'));
+            });
+
+            $('#anucana_outer_wrapper').on("click", "#saveCompanyName", function() {
+              activateReadOnlyMode($('#professionalHeadline'), $('#editCompanyName'), $('#saveCompanyName'));
+            });
+
+            $('#anucana_outer_wrapper').on("click", "#editProfileName", function() {
+              activateReadWriteMode($('#firstName'), $('#editProfileName'), $('#saveProfileName'));
+              activateReadWriteMode($('#lastName'), $('#editProfileName'), $('#saveProfileName'));
+            });
+
+            $('#anucana_outer_wrapper').on("click", "#saveProfileName", function() {
+              var valid = validateProfileName($('#firstName'), $('#lastName'));
+              if(valid){
+                 activateReadOnlyMode($('#firstName'), $('#editProfileName'), $('#saveProfileName'));
+                 activateReadOnlyMode($('#lastName'), $('#editProfileName'), $('#saveProfileName'));
+               }
+            });
+
+            $('#anucana_outer_wrapper').on("click", "#industryName", function() {
+              activateReadWriteMode($('#industryLocation'), $('#editIndustryInfo'), $('#saveIndustryInfo'));
+              activateReadWriteMode($('#industryName'), $('#editIndustryInfo'), $('#saveIndustryInfo'));
+            });
+
+            $('#anucana_outer_wrapper').on("click", "#editIndustryInfo", function() {
+              activateReadWriteMode($('#industryLocation'), $('#editIndustryInfo'), $('#saveIndustryInfo'));
+              activateReadWriteMode($('#industryName'), $('#editIndustryInfo'), $('#saveIndustryInfo'));
+            });
+
+            $('#anucana_outer_wrapper').on("click", "#saveIndustryInfo", function() {
+              activateReadOnlyMode($('#industryLocation'), $('#editIndustryInfo'), $('#saveIndustryInfo'));
+              activateReadOnlyMode($('#industryName'), $('#editIndustryInfo'), $('#saveIndustryInfo'));
+            });
+
+            // Arvind : Code Snippet# D3. Event binding using .on() in below two blocks is just to facilitate the dynamic loading of htmls here using jQuery this binding need not to be done in the jsp where jsp inclusion isn't dynamic. Simple .click() function may be used while working with jsps.
+
+            // this function makes the top 'Hello member' menu to slide down.
+            $('#anucana_outer_wrapper').on("click", "#flip", function() {
+                if(! $("#panel").is(":visible")){
+                    $("#panel").slideDown("fast");
+                    $( "#member_arrow" ).attr( "src", "img/up_arrow_grey6.png" );
+                    $("#panel").focus();
+                }
+            });
+
+            // slide up the 'Hello member' menu, if user clicks anywhere else on the page.
+            $('#anucana_outer_wrapper').on("blur", "#panel", function() {
+                $("#panel").slideUp("fast");
+                $( "#member_arrow" ).attr( "src", "img/down_arrow_grey6.png" );
+            });
+
+        // Generates a random importance index
+        function getRandomImpIndex() {
+          var iRand = Math.random();
+          var impIndex = iRand > 0.85 ? 1 : iRand > 0.6 ? 2 : iRand > 0.35 ? 3 : 3;
+          return impIndex;
+        }
+
+
+
+        $(function() {
+          var availableTags = [
+          "Harsimranjit Singh",
+          "Arvind Srivastva",
+          "Jyoti Verma",
+          "Anuj Garg",
+          "Aarti Mukkar",
+          "Rakesh Kapoor",
+          "Srinivasan",
+          "Ramanujan",
+          "Drishti Khanna",
+          "Ujwal Chawdhary",
+          "Shruti Kakkar",
+          "Mohit Khurana"
+          ];
+          $( "#searchMember_keyword" ).autocomplete({
+          source: availableTags
+          });
+        });
+
+        $('.border').click(function(){
+          //Make an ajax call here to join this particular community, and in case success is returned, execute the below code.
+          $(this).css("background-color","#009DDB");
+          $(".joinTextStyle", this).removeClass("joinTextStyle").addClass("icon").text(".");
+        });
+
+        $("#uploadFileInput").change(function() {
+          var imgUrl = uploadSelectedFile();
+          $("#cropMe").load( function(){
+            //console.log('loaded');
+            $(".inline").colorbox.resize();
+          }).attr('src', imgUrl);
+          //$("#cropMe").attr("src",imgUrl); 
+          $("#imageDrop").css("display","none");
+
+          $('#cropMe').Jcrop({
+              addClass: 'jcrop-centered', // Adds 'jcrop-centered' css class on the image handled by jcrop. 
+              setSelect: [0, 160, 160, 0], // Sets a default crop selection before user clicks on image.
+              aspectRatio: 1/1              // Adds an aspect ratio of 1:1 as we want a square selection.
+          });
+          //$.colorbox.resize();
+          //colorBox.colorbox.resize();
+          //var imgHeight = $('#cropMe').height();
+          //alert(imgHeight);
+          //$(".inline").colorbox.resize();
+          $("#uploadImageButton").attr("value","Change Image");
+          $("#cropButton").show();
+          //$("#cropButton").removeClass("hidden");
+         // $("#cropButton").css("display","block");
+        });
+
+/*
+        $('#cropMe').imagesLoaded( function() {
+            // images have loaded
+             $(".inline").colorbox.resize();
+        });
+*/
+
+       /* $("#cropMe").one('load', function() {
+          // do stuff
+          $(".inline").colorbox.resize();
+        }).each(function() {
+          if(this.complete) $(this).load();
+        });*/
+
+        function uploadSelectedFile(){
+          //perform the upload logic here and return back the server path of uploaded image(eg. images/profilePic.jpg).
+          return "images/arvsri.png";
+        }
+
+
+     /*   $('#anucana_outer_wrapper').on("click", "#imageUploader", function() {
+                    $("#cropMe").load( function(){
+                      //console.log('loaded');
+                      $(".inline").colorbox.resize();
+                    }).attr('src', 'images/arvsri.png');
+                     //$("#cropMe").attr('src', 'images/arvsri.png');
+        });*/
+        /*
+        $("#cropMe").load( function(){
+          //console.log('loaded');
+          $(".inline").colorbox.resize();
+        }).attr('src', imgUrl);
+*/
+	});
+
+  </script>
+
+  <!-- This contains the hidden content for modal window -->
+  <div style="display:none">
+    <div id="inline_content" class="lightBox">
+      <div class="crop-image-wrapper">
+        <img id="cropMe" src="" style="width:400px; margin:50px;">
+        <button id="imageDrop" onclick="document.getElementById('uploadFileInput').click()" title="Click Here">Upload image</button>
+      </div>
+      <div class="centered">
+        <h4>Select a portion of image above and save it as Profile picture</h4>
+      </div>
+      
+      <div id="bottomBar"  class="centered">
+
+      <!--input id="uploadImage" type="file" /-->
+
+
+        <input id="uploadFileInput" type="file" name="datafile" size="40">
+        <input type="button" value="Upload Image" id="uploadImageButton" class="blueButton smallButton" tabindex="1" onclick="document.getElementById('uploadFileInput').click()"></input>
+        <input id="cropButton" type="button" value="Save Image" style="display:none;" class="blueButton smallButton hidden" ></input>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
