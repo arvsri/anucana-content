@@ -2,12 +2,6 @@
 Credit: http://www.anucana.com
 */
 
-@font-face {
-font-family: WebSymbolsRegular;
-src: url(../css/fonts/WebSymbols/WebSymbols-Regular.otf) format("opentype");
-}
-
-
 .joinCircle_CSR {
   height: 36px;
   width: 36px;
@@ -72,9 +66,6 @@ src: url(../css/fonts/WebSymbols/WebSymbols-Regular.otf) format("opentype");
     left:2px;
 }
 
-.webSymbol{
-    font-family: WebSymbolsRegular, Helvetica, Verdana, Sans-Serif;
-}
 
 .blueOnWhite{
     background-color: #FFFFFF;
@@ -86,13 +77,6 @@ src: url(../css/fonts/WebSymbols/WebSymbols-Regular.otf) format("opentype");
     color: #00689c;
 }
 
-.icon{
-  font-family: WebSymbolsRegular, Helvetica, Verdana, Sans-Serif;
-    background-color: #FFFFFF;
-    color: #009DDB;
-    font-size: 20px;
-    position:absolute;
-}
 
 
 
