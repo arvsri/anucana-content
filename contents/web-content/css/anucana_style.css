@@ -672,12 +672,13 @@ body { font-family: sans-serif; }
   float:right;
 }
 
-#contactInfoAccordian>div>input , #contactInfoAccordian>div>div {
+#contactInfoAccordian>div>input , #contactInfoAccordian>div>div, #contactInfoAccordian>div>select {
   margin-left: 277px !important;
+  margin: 5px 0;
 }
 
-#addressAccBox>div , #addressAccBox>input {
-  margin: 5px 0px 5px;
+#contactInfoAccBox>table{
+  margin-left: 190px !important;
 }
 
 #accordion .ui-accordion-header  a, #checkoutAccordion .ui-accordion-header  a {  
