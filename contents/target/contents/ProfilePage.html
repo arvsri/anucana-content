@@ -112,9 +112,36 @@
                                 <span id="phoneNumberDisplay">7503254033</span>
                                 <span><a href="">Edit</a></span>
                               </h3>
-                              <div>
-                                <input type="text" id="phoneNumberInput" value="7503254033" />
-                                <button type="button" id="savePhoneButton" class="blueButton smallButton">Save</button>
+                              <div id="contactInfoAccBox">
+                                  <table>
+                                    <tr>
+                                      <td align="right" style="color:#555555">Phone #&nbsp;</td>
+                                      <td><input type="text" id="phoneNumberInput" value="7503254033" /><br/></td>
+                                    </tr>
+                                    <tr>
+                                      <td align="right" style="color:#555555">Phone type&nbsp;</td>
+                                      <td>
+                                        <select>
+                                          <option>Work</option>
+                                          <option>Personal</option>
+                                        </select>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td align="right" style="color:#555555">Visible to&nbsp;</td>
+                                      <td>
+                                        <select>
+                                          <option>Community Members</option>
+                                          <option>No One</option>
+                                          <option>Everyone</option>
+                                        </select>
+                                      </td>
+                                    </tr>
+                                  </table>
+
+                                  <input type="button" id="savePhoneButton" class="blueButton smallButton" value="Save"></input>
+
+                      
                               </div>
                               <h3>
                                 <span>Primary Email</span>
