@@ -688,7 +688,7 @@ body { font-family: sans-serif; }
 
 
 #contactInfoAccordian>h3>span:nth-child(2){
-  float:left;width:100px;
+  float:left;
 }
 
 #contactInfoAccordian>h3>span:nth-child(3){
