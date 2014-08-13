@@ -204,9 +204,11 @@
                               <div>
                                 <a href="CommunitySearch.html">Find more communities.</a>
                               </div>
+							  <!--
                               <div class="hidden">
                                 <a href="CommunitySearch.html">Find Communities.</a>
                               </div>
+							  -->
                               </b>
                             </h5>
                               <div id="container01" style="margin-top:20px;overflow: hidden;" class="masonry">
@@ -357,6 +359,7 @@
             $("#accordion > div:last-child").accordion('option', 'active', 0);
 
             $( "#myCommunitiesAcc" ).on( "accordionactivate", function( event, ui ) {
+			alert("Hello I am called");
               refreshMasonry();
             } );
         })

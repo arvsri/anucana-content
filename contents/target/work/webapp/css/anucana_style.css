@@ -152,6 +152,30 @@ Credit: http://www.anucana.com
   z-index: 1;
 }
 
+.darkClass
+{
+    background-color: #666;
+    filter:alpha(opacity=40); /* IE */
+    opacity: 0.4; /* Safari, Opera */
+    -moz-opacity:0.40; /* FireFox */
+    z-index: 20;
+    height: 100%;
+    width: 100%;
+    background-repeat:no-repeat;
+    background-position:center;
+    position:absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.startsUgly { display: none; }
+
+#darkLayer img.loading_circle {
+    position: absolute;
+    top: 30%;  /* edit these values to give you*/
+    left: 45%; /* the positioning you're looking for.*/
+}
+
 #communityBanner{
   position: relative;
   /*width: 250px; 
@@ -182,12 +206,9 @@ Credit: http://www.anucana.com
 }
 
 .profileBannerText #firstName, .profileBannerText #lastName{
-  font-size:30px;
+  font-size:15px;
 }
 
-.profileBannerText{
-  padding: 5px 10px 5px 10px;
-}
 
 #editCommunityNameIcon{
   padding-left: 10px;
@@ -321,6 +342,12 @@ div[contenteditable], span[contenteditable]{
     border: 1px solid #3D3D3D;
     padding : 6px;
     overflow: auto;
+}
+
+
+
+.editIconsTd{
+  width: 40px;
 }
 
 #communityName[contenteditable]{
@@ -661,7 +688,7 @@ body { font-family: sans-serif; }
 
 
 #contactInfoAccordian>h3>span:nth-child(2){
-  float:left;width:100px;
+  float:left;
 }
 
 #contactInfoAccordian>h3>span:nth-child(3){
@@ -677,7 +704,7 @@ body { font-family: sans-serif; }
   margin: 5px 0;
 }
 
-#contactInfoAccBox>table{
+#contactInfoAccordian>div>table{
   margin-left: 190px !important;
 }
 

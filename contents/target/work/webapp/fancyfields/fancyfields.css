@@ -117,7 +117,7 @@
 
 
 /* selectbox */
-.ffSelectWrapper {width:150px;*clear:both;}
+.ffSelectWrapper {*clear:both;}
 .ffSelect {position: relative;}
 
 .ffSelect > a {
