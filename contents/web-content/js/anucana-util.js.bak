@@ -111,7 +111,9 @@ function getEventLightBox(dynamicBoxIndex, eventData){
 			'</table>' +
 		  '</div>' +
 		  '<div id="bottomBar"  class="centered">' +
-			'<input type="button" value="Book my seat" id="bookingButton" class="blueButton smallButton" tabindex="1" >' +
+			'<form action="/web/booking/managed/bookEvent?eventId='+ eventData.eventId +'" method="get">'+
+				'<input type="submit" value="Book my seat" id="bookingButton" class="blueButton smallButton" tabindex="1">' +
+			'</form>'+
 			'</input>' +
 		  '</div>' +
 		'</div>' +

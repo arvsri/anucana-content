@@ -1,0 +1,273 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>anucana | community</title>
+	<link href="css/jquery-ui.css" rel="stylesheet" type="text/css" />
+	<link href="css/anucana_style.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
+	<link rel="shortcut icon" href="images/icons/favicon.ico" />
+</head>
+<body class="fontBlack">
+<div id="anucana_outer_wrapper">
+    <!-- This div holds Block 1 & Block 2 -->
+    <div id="headerContent_Member"></div>
+    <!-- This div holds Block 3 -->
+    <div id="sideButtons_Member"></div> 
+    <!--Block 4 - This block holds Search Community form and search results -->
+	<div id="anucana_wrapper" class="wrapper_1020">
+        <div id="anucana_main">
+            <div id="grey_wrapper" class="greyLinen_background">
+                <div style="margin-top:10px;">
+                
+                <!-- page display global variables  -->
+                <script type="text/javascript">
+
+                	/**************************************************************** Community page banner variable ******************************************/
+                	/******************************************************************************************************************************************/
+          			var communityBannerString =
+	                    '<div class="darkShadeOverlay roundedTopCorners" style="height:200px;">'+
+	                    '</div>'+
+	                    '<div class="darkShadeOverlay roundedBottomCorners" style="height:50px;margin-top:5px;">'+
+	                    '</div>'+
+	                    '<div id="communityBannerBox" class="masonryBox communityFontsize col4">'+
+	                      '<table   style="width:100%">'+
+	                        '<tr>'+
+	                          '<td style="padding : 30px;width:30%">'+
+	                            '<div id="communityBanner" class="col3">'+
+	                              '<img class="communityBoxPhoto" src="${community.bannerUrl}">'+
+	                              '<div class="border joinCircle_CP">'+
+	                                '<div class="circleFiller">'+
+	                                  '<span class="joinTextStyle"> Join </span>'+
+	                                '</div>'+
+	                              '</div>'+
+	                            '</div> '+
+	                          '</td>'+
+	                          '<td style="padding : 0px 0px 0px 0px;">'+
+	                            '<table style="width:100%;height:100%;">'+
+	                              "<tr>"+
+	                                '<td style="padding:40px 0px 60px 65px;">'+
+	                                  '<div id="communityNameBox">'+
+	                                      '<span id="communityName">${community.name}</span>'+
+	                                  '</div>'+
+	                                '</td>'+
+	                              '</tr>'+
+	                              '<tr>'+
+	                                '<td  style="padding : 10px 30px 0px 0px;">'+
+	                                  '<div id="communityLinks">'+
+	                                    '<div id="anucana_menu">'+
+	                                      '<ul>'+
+	                                          '<li><a class="current" id="homeLink">Home</a></li>'+
+	                                          '<li><a id="membersLink">Members</a></li>'+
+	                                          '<li><a href="${pageContext.request.contextPath}/event/unmanaged/home?communityId=${community.communityId}">Events</a></li>'+
+	                                      '</ul>'       +
+	                                    '</div>' +
+	                                  '</div>'+
+	                                '</td>'+
+	                              '</tr>'+
+	                              '<tr>'+
+	                                '<td  style="padding : 10px 15px 10px 80px;">'+
+	                                    '<div id="memberSearch" class="ui-widget" style="float:right;display:none;">'+
+	                                      '<input id="searchMember_keyword" placeholder="Search Members">'+
+	                                    '</div>'+
+	                                '</td>'+
+	                              '</tr>'+
+	                            '</table>'+
+	                          '</td>'+
+	                        '</tr>'+
+	                      '</table>'+
+	                    '</div>';
+                	
+	                	/**************************************************************** Community description variable ******************************************/
+	                	/******************************************************************************************************************************************/
+			          	var communityDescString = 
+	                    '<div class="masonryBox roundedCorners communityWhiteBox" style="margin:20px 0 20px 0;width:100%">'+
+	                      '<div class="blueHeader14">'+
+	                        '<span>About the Community</span>'+
+	                      '</div>'+
+	                      '<div >'+
+	                        '<div>${community.about}</div>'+
+	                      '</div>'+
+	                    '</div>';
+                	
+		                	/**************************************************************** Community contact details variable **************************************/
+		                	/******************************************************************************************************************************************/
+				          	var contactUsString = 
+	                    '<div class="masonryBox roundedCorners communityWhiteBox" style="margin:20px 0 20px 0;width:100%">'+
+	                      '<div class="blueHeader14">'+
+	                        '<span>About the Community</span>'+
+	                      '</div>'+
+	                      '<div >'+
+	                        '<div>${community.about}</div>'+
+	                      '</div>'+
+	                    '</div>';
+                </script>
+                
+                  <div id="container" style="overflow: hidden;" class="masonry">
+                  </div> <!-- End of masonry container -->
+                </div>
+                <span id="communities_LoadMoreMembersSpan" style="display:none;">
+                    <button type="button" id="moreMembers" class="blueButton bigButton">Load more members</button>
+                </span> 
+            </div> <!-- end of grey_wrapper -->
+        </div> <!-- end of anucana_main -->
+        <!--Block 5 - This block holds the padding space to keep the footer at bottom -->
+        <div id="emptyPad" style="height:130px" > </div>
+        <!-- This div holds Block 6 -->
+		<%@ include file="fragments/footerContent.jsp" %>
+    </div> <!-- end of anucana_wrapper -->
+	</div> <!-- end of anucana_outer_wrapper -->
+
+<script type='text/javascript' src='js/jquery1.9.1.min.js'></script>
+<script type='text/javascript' src='js/jquery-ui.js'></script>
+<script type='text/javascript' src='js/masonry.pkgd.js'></script>
+<script type='text/javascript' src='js/imagesloaded.pkgd.js'></script>
+<script type='text/javascript' defer src='js/jquery.flexslider.js'></script>
+<script type='text/javascript' src='js/anucana-util.js'></script>
+
+  <script type="text/javascript">
+  
+  	var subscribersListAPI = "${pageContext.request.contextPath}/community/unmanaged/${community.communityId}/subscribers";
+  	
+	$(window).load(function() {
+
+		$('#anucana_outer_wrapper').on("click", "#flip", function() {
+            if(! $("#panel").is(":visible")){
+                $("#panel").slideDown("fast");
+                $( "#member_arrow" ).attr( "src", "img/up_arrow_grey6.png" );
+                $("#panel").focus();
+            }
+        });
+
+        // slide up the 'Hello member' menu, if user clicks anywhere else on the page.
+        $('#anucana_outer_wrapper').on("blur", "#panel", function() {
+            $("#panel").slideUp("fast");
+            $( "#member_arrow" ).attr( "src", "img/down_arrow_grey6.png" );
+        });
+		
+		var $container = $('.masonry');
+        $container.empty();
+        var boxList = $();
+		
+        // Global variable to count the number of dynamic boxes loaded on this page so far
+        var dynamicBoxesLoaded = 0;
+        var profileDisplayPageNumber = 1;
+
+        boxList = appendCommunityHomeBoxElements(boxList);
+        appendCommunityPostElements("", boxList);
+
+        $('#moreMembers').click(function(){
+          	var boxList = $();
+          	
+          	var data = "pageNumber="+profileDisplayNumber;
+          	var search = $.get(subscribersListAPI,data,null,"json");
+
+          	search.done(function(response){
+	          	appendMemberElements(response.subscribers, boxList);
+	          	profileDisplayPageNumber++;
+	          	if(response.nextPage){
+	              	$('#communities_LoadMoreMembersSpan').css("display","block");
+	          	}else{
+	          		$('#communities_LoadMoreMembersSpan').css("display","none");
+	          	}
+			});
+			search.fail(function(event){
+				$(".errorMsg").text(" An error ocurred while processing !");
+			});
+        });
+
+        $('#membersLink').click(function(){
+          	$(".masonryBox:not(#communityBannerBox)").remove();
+          	$('#memberSearch').css("display","block");
+          	var boxList = $();
+          	
+          	profileDisplayNumber = 1;
+          	var data = "pageNumber="+profileDisplayNumber;
+          	var search = $.get(subscribersListAPI,data,null,"json");
+
+          	search.done(function(response){
+	          	appendMemberElements(response.subscribers, boxList);
+	          	profileDisplayPageNumber++;
+	          	if(response.nextPage){
+	              	$('#communities_LoadMoreMembersSpan').css("display","block");
+	          	}else{
+	          		$('#communities_LoadMoreMembersSpan').css("display","none");
+	          	}
+			});
+			search.fail(function(event){
+				$(".errorMsg").text(" An error ocurred while processing !");
+			});
+        });
+
+        $('#homeLink').click(function(){
+          	$(".masonryBox:not(#communityBannerBox)").remove();
+          	var boxList = $();
+          	boxList = appendCommunityHomeBoxElements(boxList);
+          	boxList = appendCommunityPostElements("",boxList);
+          	$('#communities_LoadMoreMembersSpan').css("display","none");
+          	$('#memberSearch').css("display","none");
+        });
+
+        function appendCommunityHomeBoxElements(boxList){
+	          boxList = boxList.add($($.parseHTML(communityDescString)));
+        	  boxList = boxList.add($($.parseHTML(contactUsString)));
+          	  return boxList;
+        }
+
+        function appendCommunityBannerElement(boxList){      
+            boxList = boxList.add($($.parseHTML(communityBannerString)));
+            return boxList;
+        }
+        
+        // This method appends newly generated masonry boxes to the masonry container
+        function appendCommunityPostElements(responseJSON, boxList){
+          var lastLoadedCount = dynamicBoxesLoaded;
+          $container = $container.append( boxList );
+          $('.masonry').imagesLoaded( function() {
+            // images have loaded
+            $container.masonry( 'appended', boxList )
+                .masonry( 'reloadItems' )
+                .masonry({
+                  itemSelector: '.masonryBox',
+                  columnWidth: 60,
+                  isAnimated: true,
+                  gutter:20
+                });
+            });
+
+          return boxList;
+        }
+
+        // This method appends newly generated masonry boxes to the masonry container
+        function appendMemberElements(responseJSON, boxList){
+          var lastLoadedCount = dynamicBoxesLoaded;
+          
+          $.each(responseJSON, function(i, userProfile) {
+        	console.log(userProfile);  
+        	var profileURL = "${pageContext.request.contextPath}/profile/unmanaged/" + userProfile.userId;
+            var boxElement = getProfileBox(i + lastLoadedCount,profileURL, userProfile);
+            boxList = boxList.add($(boxElement));
+            dynamicBoxesLoaded++;
+          });
+
+          $container = $container.append( boxList );
+          
+          $('.masonry').imagesLoaded( function() {
+            // images have loaded
+            $container.masonry( 'appended', boxList )
+                .masonry('reloadItems')
+                .masonry({
+                  itemSelector: '.masonryBox',
+                  columnWidth: 60,
+                  isAnimated: true,
+                  gutter:20
+                });
+            });
+          return boxList;
+        }
+	});
+
+  </script>
+
+</body>
+</html>
