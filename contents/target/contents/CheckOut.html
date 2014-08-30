@@ -33,11 +33,16 @@
 
                   <div id="checkoutAccordion">
                       <div id="signUpAcc">
-                          <h3 class="blueHeader14"><a href="#" id="signInLink">1. Sign In</a></h3>
+                          <h3 class="blueHeader14 active"><a href="#" id="signInLink">1. Sign In</a></h3>
                           <div id="contactInfoAccordian">
+                              <div>
+                                <div>Logged in as <b>simran_joy16@yahoo.co.in</b></div>
+                                <br>
+                                <div><input type="button" class="blueButton smallButton" value="Continue" /></div>
+                              </div>
                             
                               <!-- start of login block -->
-                              <div id="checkoutLoginBlock">
+                              <div id="checkoutLoginBlock" style="display:none;">
                                   <table cellspacing="0" style="margin: 0 auto;">
                                       <tbody>
                                          <tr id="coFirstNameRow" style="display:inline-block">
@@ -294,6 +299,13 @@
         }
 
 
+        $("#anucana_outer_wrapper").on("click", ".active", function() {
+          //  alert('hi');
+            return false;
+        });
+
+
+
         /* This block applies accordion  on all child divs of checkoutAccordion independent of each other and on contactInfoAccordian */
         $(function() {
             var $acc = $("#checkoutAccordion > div").accordion({ header: "> h3", 
@@ -364,11 +376,19 @@
           //$(".joinTextStyle", this).removeClass("joinTextStyle").addClass("icon").text(".");
         });
 
+
+        // This block updates the header of active/collapsed accordion. Make sure to modify the logic in case order of accordion panels is shuffled or modified.
         $("#signUpAcc").accordion({
             activate: function(event, ui) {
-                alert(ui.newHeader.text());  // For instance.
+                //alert(ui.newHeader.text());  // For instance.
                 var active = $( "#signUpAcc" ).accordion( "option", "active" );
-                alert(active);
+                if (!(active == 0)){
+                  $("#signInLink")
+                  .html("<span>1. Email ID<span style='margin-left:200px;'>simran_joy16@yahoo.co.in</span></span>");
+                }
+                else{
+                  $("#signInLink").text("1. Sign In");
+                }
             }
         });
 
